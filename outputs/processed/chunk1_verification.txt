@@ -1,0 +1,75 @@
+================================================================================
+CHUNK 1: DATA PREPARATION, CLEANING AND VALIDATION VERIFICATION REPORT
+================================================================================
+
+1. FILE DISCOVERY & COVERAGE:
+   - Total raw files processed: 36 (12 Income, 12 Expenditure, 12 EMI)
+   - Categories covered: Income, Expenditure, EMI
+   - Period: 2014-15 to 2025-26 (12 consecutive financial years)
+   - Chronological order verified: YES
+
+2. DATASET DIMENSIONS:
+   - Income State Dataset:         336 rows x 38 cols (336 state-year observations)
+   - Expenditure State Dataset:    336 rows x 14 cols (336 state-year observations)
+   - EMI State Dataset:            336 rows x 17 cols (336 state-year observations)
+   - Income National Dataset:      12 rows x 38 cols (12 national annual observations)
+   - Expenditure National Dataset: 12 rows x 14 cols (12 national annual observations)
+   - EMI National Dataset:         12 rows x 17 cols (12 national annual observations)
+
+3. STATE / UT CONSISTENCY:
+   - Unique states/UTs per year across all categories: Exactly 28
+   - Duplicate state records per year: Exactly 0
+   - State list: Andhra Pradesh, Assam, Bihar, Chandigarh, Chhattisgarh, Delhi, Goa, Gujarat,
+     Haryana, Himachal Pradesh, Jammu & Kashmir, Jharkhand, Karnataka, Kerala, Madhya Pradesh,
+     Maharashtra, Meghalaya, Odisha, Puducherry, Punjab, Rajasthan, Sikkim, Tamil Nadu, Telangana,
+     Tripura, Uttar Pradesh, Uttarakhand, West Bengal.
+   - Category cross-consistency: PERFECT MATCH (0 missing, 0 extra across Income, Expenditure, EMI).
+   - National Aggregates: 'India' row strictly segregated into national datasets (0 India rows in state tables).
+
+4. MISSING DATA AUDIT & ANALYSIS:
+   - Total missing cells in State Income:      1736
+   - Total missing cells in State Expenditure: 216
+   - Total missing cells in State EMI:         270
+   - Detailed Breakdown of Missingness:
+     a) Chandigarh: 100% urban Union Territory. In raw files, only Urban_* columns are reported;
+        Total_* and Rural_* columns are unpopulated (NaN). Preserved as NaN to avoid biased rural rates.
+     b) Unreported State-Years (All-NaN rows):
+        - Meghalaya & Tripura: All numeric values unpopulated in 2014-15, 2015-16, 2016-17.
+        - Sikkim: All numeric values unpopulated from 2014-15 through 2017-18.
+     c) Income Survey Revisions (2014-15 to 2020-21):
+        - Two in-kind measures across three sectors (Total, Urban, Rural = 6 columns) were uncollected
+          prior to 2021-22: 'Transfer in kind from government' and 'Transfer in kind from NGO'.
+        - In 2021-22 onward, in-kind columns are fully populated across all reporting states.
+
+5. NATIONAL AGGREGATES ('India') & RECONCILIATION:
+   - Expenditure National missing cells: 0 across all 12 years (100% complete).
+   - EMI National missing cells: 0 across all 12 years (100% complete).
+   - Income National missing cells: Exactly 42 cells total across all 12 years.
+     * Mathematical Reconciliation: 2 in-kind measures x 3 sectors (Total, Urban, Rural) = 6 columns.
+       6 columns x 7 uncollected years (2014-15 to 2020-21) = 42 cells.
+     * All remaining 30 numeric columns have 0 missing cells across all 12 years.
+     * Years 2021-22 through 2025-26 have 0 missing cells in national income.
+
+6. SOURCE NOTES & SAMPLING DISCLAIMERS:
+   - Footnote text detected in raw files: '2025-2026 observation is based on 75% sample for Mar 2026.'
+   - Occurrence: Present in 34 of 36 files (absent only in Income 2021-22 and 2022-23).
+   - Classification:
+     * 2025-26 Files (Income, Expenditure, EMI): Year-Specific Qualification stating that the 2025-2026
+       observation is based on a 75% sample for March 2026.
+     * 2014-15 to 2024-25 Files: Global Portal Export Disclaimer. The note explicitly references only the
+       '2025-2026 observation' and does not restrict or modify data for historical reference years.
+
+7. OUTPUT ARTIFACT VERIFICATION (Project-relative paths):
+   - outputs/processed/income_states_all_years.csv        (336 rows x 38 cols)
+   - outputs/processed/expenditure_states_all_years.csv   (336 rows x 14 cols)
+   - outputs/processed/emi_states_all_years.csv           (336 rows x 17 cols)
+   - outputs/processed/income_national_all_years.csv      (12 rows x 38 cols)
+   - outputs/processed/expenditure_national_all_years.csv (12 rows x 14 cols)
+   - outputs/processed/emi_national_all_years.csv         (12 rows x 17 cols)
+   - outputs/processed/data_quality_audit.csv             (36 rows x 10 cols)
+   - outputs/processed/source_notes.csv                   (36 rows x 9 cols)
+   - outputs/processed/state_consistency.csv              (3 rows x 7 cols)
+
+================================================================================
+STATUS: ALL VERIFICATION CHECKS PASSED. DATA INTEGRITY FULLY CONFIRMED.
+================================================================================

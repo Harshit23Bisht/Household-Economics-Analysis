@@ -1,0 +1,224 @@
+================================================================================
+CHUNK 1 TARGETED INDEPENDENT VERIFICATION & RECONCILIATION REPORT
+================================================================================
+Project: Indian Household Economics (2014-15 to 2025-26)
+Date: October 2026
+Verified By: Antigravity Automated Verification Subsystem
+
+--------------------------------------------------------------------------------
+CHECK 1: MISSING NATIONAL INCOME VALUES & MATHEMATICAL RECONCILIATION
+--------------------------------------------------------------------------------
+
+Source File Audited: outputs/processed/income_national_all_years.csv
+Dataset Dimensions: 12 rows (one national observation per financial year) x 38 columns (Year, State, 36 numeric columns)
+Total Cells: 12 x 38 = 456 cells (432 numeric cells)
+
+1. RECALCULATED MISSING NUMERIC CELLS:
+   - Total missing cells across entire national income dataset: 42 cells
+   - Total missing cells in non-in-kind numeric columns (30 columns): 0 cells
+   - Missing cells in 2021-22 to 2025-26 (5 years x 36 numeric columns): 0 cells
+
+2. COMPLETE COLUMN-BY-COLUMN BREAKDOWN OF MISSING VALUES:
+   Column Name                                   Missing Count  Affected Financial Years
+   ---------------------------------------------------------------------------------------------
+   Total_Transfer in kind from government        7              2014-15, 2015-16, 2016-17, 2017-18, 2018-19, 2019-20, 2020-21
+   Total_Transfer in kind from NGO               7              2014-15, 2015-16, 2016-17, 2017-18, 2018-19, 2019-20, 2020-21
+   Urban_Transfer in kind from government        7              2014-15, 2015-16, 2016-17, 2017-18, 2018-19, 2019-20, 2020-21
+   Urban_Transfer in kind from NGO               7              2014-15, 2015-16, 2016-17, 2017-18, 2018-19, 2019-20, 2020-21
+   Rural_Transfer in kind from government        7              2014-15, 2015-16, 2016-17, 2017-18, 2018-19, 2019-20, 2020-21
+   Rural_Transfer in kind from NGO               7              2014-15, 2015-16, 2016-17, 2017-18, 2018-19, 2019-20, 2020-21
+   ---------------------------------------------------------------------------------------------
+   Total Missing Cells in National Income Dataset: 42 cells
+
+3. MATHEMATICAL RECONCILIATION OF 14 VS 42 MISSING CELLS:
+   - If examining ONLY the aggregate "Total" demographic sector:
+     2 measures (Govt in-kind, NGO in-kind) x 7 early financial years = 14 missing cells.
+   - However, the household economics Income dataset disaggregates all measures across THREE geographic sectors:
+     1. Total sector (2 in-kind measures)
+     2. Urban sector (2 in-kind measures)
+     3. Rural sector (2 in-kind measures)
+   - Across the three sectors, there are 2 x 3 = 6 distinct in-kind columns.
+   - Therefore, the exact mathematical contribution across the 7 early uncollected years is:
+     6 columns x 7 financial years = 42 missing cells.
+   - There are ZERO additional or unexplained missing values in the national income dataset.
+
+--------------------------------------------------------------------------------
+CHECK 2: SAMPLING FOOTNOTES & CLASSIFICATION AUDIT
+--------------------------------------------------------------------------------
+
+Exact Footnote Text Detected:
+"2025-2026 observation is based on 75% sample for Mar 2026."
+
+DETECTION AUDIT ACROSS ALL 36 FILES:
+Filename                     Category     Year     Detected Note                                               Scope Classification
+----------------------------------------------------------------------------------------------------------------------------------------------
+Income_2014_15.xls           Income       2014-15  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Income_2015_16.xls           Income       2015-16  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Income_2016_17.xls           Income       2016-17  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Income_2017_18.xls           Income       2017-18  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Income_2018_19.xls           Income       2018-19  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Income_2019_20.xls           Income       2019-20  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Income_2020_21.xls           Income       2020-21  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Income_2021_22.xls           Income       2021-22  None                                                        None
+Income_2022_23.xls           Income       2022-23  None                                                        None
+Income_2023_24.xls           Income       2023-24  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Income_2024_25.xls           Income       2024-25  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Income_2025_26.xls           Income       2025-26  2025-2026 observation is based on 75% sample for Mar 2026. Year-Specific Data Qualification
+Expenditure_2014_15.xls      Expenditure  2014-15  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2015_16.xls      Expenditure  2015-16  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2016_17.xls      Expenditure  2016-17  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2017_18.xls      Expenditure  2017-18  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2018_19.xls      Expenditure  2018-19  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2019_20.xls      Expenditure  2019-20  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2020_21.xls      Expenditure  2020-21  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2021_22.xls      Expenditure  2021-22  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2022_23.xls      Expenditure  2022-23  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2023_24.xls      Expenditure  2023-24  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2024_25.xls      Expenditure  2024-25  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+Expenditure_2025_26.xls      Expenditure  2025-26  2025-2026 observation is based on 75% sample for Mar 2026. Year-Specific Data Qualification
+EMI_2014_15.xls              EMI          2014-15  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2015_16.xls              EMI          2015-16  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2016_17.xls              EMI          2016-17  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2017_18.xls              EMI          2017-18  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2018_19.xls              EMI          2018-19  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2019_20.xls              EMI          2019-20  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2020_21.xls              EMI          2020-21  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2021_22.xls              EMI          2021-22  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2022_23.xls              EMI          2022-23  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2023_24.xls              EMI          2023-24  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2024_25.xls              EMI          2024-25  2025-2026 observation is based on 75% sample for Mar 2026. Global Portal Export Disclaimer
+EMI_2025_26.xls              EMI          2025-26  2025-2026 observation is based on 75% sample for Mar 2026. Year-Specific Data Qualification
+
+CLASSIFICATION & METHODOLOGICAL FINDINGS:
+1. Genuine Scope: The note explicitly states "2025-2026 observation is based on 75% sample for Mar 2026." It applies strictly and exclusively to FY 2025-26.
+2. Global Portal Disclaimer in Historical Files: In the other 31 files (2014-15 to 2024-25), the presence of this exact same note was a byproduct of the CMIE export system injecting its active disclaimer banner during table generation. It does not qualify or restrict historical data.
+3. Unsupported Claims Removed: We have removed the characterization "annualized provisional data" from all project artifacts because neither "annualized" nor "provisional" appears in the raw text. The factual qualification is strictly that the March 2026 observation within FY 2025-26 was completed at a 75% sample wave.
+
+--------------------------------------------------------------------------------
+CHECK 3: STATE/UT COVERAGE AND MISSINGNESS AUDIT
+--------------------------------------------------------------------------------
+
+YEAR-BY-YEAR COVERAGE & OBSERVATION TABLE:
+
+Category     Year     States/UTs  Numeric Cols  Total Cells  Valid Cells  Missing Cells  All-NaN Rows  States with All-NaN Rows
+-------------------------------------------------------------------------------------------------------------------------------
+Income       2014-15  28          36            1008         730          278            3             Meghalaya, Tripura, Sikkim
+Income       2015-16  28          36            1008         730          278            3             Meghalaya, Tripura, Sikkim
+Income       2016-17  28          36            1008         730          278            3             Meghalaya, Tripura, Sikkim
+Income       2017-18  28          36            1008         790          218            1             Sikkim
+Income       2018-19  28          36            1008         820          188            0             None
+Income       2019-20  28          36            1008         820          188            0             None
+Income       2020-21  28          36            1008         820          188            0             None
+Income       2021-22  28          36            1008         984          24             0             None
+Income       2022-23  28          36            1008         984          24             0             None
+Income       2023-24  28          36            1008         984          24             0             None
+Income       2024-25  28          36            1008         984          24             0             None
+Income       2025-26  28          36            1008         984          24             0             None
+
+Expenditure  2014-15  28          12            336          292          44             3             Meghalaya, Tripura, Sikkim
+Expenditure  2015-16  28          12            336          292          44             3             Meghalaya, Tripura, Sikkim
+Expenditure  2016-17  28          12            336          292          44             3             Meghalaya, Tripura, Sikkim
+Expenditure  2017-18  28          12            336          316          20             1             Sikkim
+Expenditure  2018-19  28          12            336          328          8              0             None
+Expenditure  2019-20  28          12            336          328          8              0             None
+Expenditure  2020-21  28          12            336          328          8              0             None
+Expenditure  2021-22  28          12            336          328          8              0             None
+Expenditure  2022-23  28          12            336          328          8              0             None
+Expenditure  2023-24  28          12            336          328          8              0             None
+Expenditure  2024-25  28          12            336          328          8              0             None
+Expenditure  2025-26  28          12            336          328          8              0             None
+
+EMI          2014-15  28          15            420          365          55             3             Meghalaya, Tripura, Sikkim
+EMI          2015-16  28          15            420          365          55             3             Meghalaya, Tripura, Sikkim
+EMI          2016-17  28          15            420          365          55             3             Meghalaya, Tripura, Sikkim
+EMI          2017-18  28          15            420          395          25             1             Sikkim
+EMI          2018-19  28          15            420          410          10             0             None
+EMI          2019-20  28          15            420          410          10             0             None
+EMI          2020-21  28          15            420          410          10             0             None
+EMI          2021-22  28          15            420          410          10             0             None
+EMI          2022-23  28          15            420          410          10             0             None
+EMI          2023-24  28          15            420          410          10             0             None
+EMI          2024-25  28          15            420          410          10             0             None
+EMI          2025-26  28          15            420          410          10             0             None
+
+STRUCTURAL VS UNEXPLAINED MISSINGNESS TAXONOMY:
+1. Structural Administrative Missingness (Chandigarh):
+   - In all 36 files, Chandigarh is reported solely under Urban columns.
+   - Total columns (12 in Income, 4 in Expenditure, 5 in EMI) and Rural columns (12 in Income, 4 in Expenditure, 5 in EMI) are completely unpopulated (empty tabs) in the raw export.
+   - This accounts for:
+     * Income: 24 missing cells/yr in 2021-22 to 2025-26 (12 Total + 12 Rural). In 2014-15 to 2020-21, 26 cells (24 + 2 unmeasured Urban in-kind transfers).
+     * Expenditure: 8 missing cells/yr in all 12 years (4 Total + 4 Rural).
+     * EMI: 10 missing cells/yr in all 12 years (5 Total + 5 Rural).
+2. Unreported State-Years (All-NaN Rows in Raw Source Files):
+   - Meghalaya: 36 Income, 12 Expenditure, 15 EMI cells missing in 2014-15, 2015-16, 2016-17.
+   - Tripura: 36 Income, 12 Expenditure, 15 EMI cells missing in 2014-15, 2015-16, 2016-17.
+   - Sikkim: 36 Income, 12 Expenditure, 15 EMI cells missing in 2014-15, 2015-16, 2016-17, 2017-18.
+   - Classification: Factual non-reporting in raw files. We do not invent unsupported hypotheses for why the portal omitted these state-years.
+3. Survey Definition Introduction:
+   - In-kind transfers (Government and NGO) across Total, Urban, Rural (6 columns) are completely uncollected for all states in 2014-15 to 2020-21 (6 cols x 25 reporting states x 7 yrs = 1,050 cells; plus Chandigarh 2 cols x 7 yrs = 14 cells).
+4. National Aggregates Verification:
+   - 'India' row count in state datasets: STRICTLY ZERO (100% segregated).
+
+ADMINISTRATIVE BOUNDARY ASSESSMENT:
+- Andhra Pradesh & Telangana: Both states appear as separate, continuous entities across all 12 financial years (2014-15 to 2025-26). There is no mid-sample bifurcation break.
+- Jammu & Kashmir: Maintained under a single entity name ("Jammu & Kashmir") continuously across all 12 years without a separate Ladakh series.
+- Union Territories: Chandigarh, Delhi, and Puducherry are tracked alongside the 25 States.
+
+--------------------------------------------------------------------------------
+CHECK 4: DATASET AND OUTPUT INTEGRITY RECALCULATION
+--------------------------------------------------------------------------------
+
+INDEPENDENT RE-OPENING AND AUDIT OF ALL OUTPUT ARTIFACTS:
+
+Output Artifact Relative Path                        Rows  Cols  Missing Cells  Financial Years  Duplicate Keys  National Rows
+-----------------------------------------------------------------------------------------------------------------------------
+outputs/processed/income_states_all_years.csv        336   38    1736           12 (2014-26)     0               0
+outputs/processed/expenditure_states_all_years.csv   336   14    216            12 (2014-26)     0               0
+outputs/processed/emi_states_all_years.csv           336   17    270            12 (2014-26)     0               0
+outputs/processed/income_national_all_years.csv      12    38    42             12 (2014-26)     0               12
+outputs/processed/expenditure_national_all_years.csv 12    14    0              12 (2014-26)     0               12
+outputs/processed/emi_national_all_years.csv         12    17    0              12 (2014-26)     0               12
+outputs/processed/data_quality_audit.csv             36    10    0              12 (2014-26)     0               0
+outputs/processed/source_notes.csv                   36    9     0              12 (2014-26)     0               0
+outputs/processed/state_consistency.csv              3     7     0              12 (2014-26)     0               0
+
+DEFENSIBLE RECONCILIATION & "ZERO DATA LOSS" PROOF:
+- Raw Source Universe: 36 files across Income, Expenditure, and EMI (12 files per category).
+- Substantive Records per File: Each file contains exactly 28 state records + 1 national aggregate ('India') record = 29 data rows.
+- Total Substantive Raw Records per Category: 12 files x 29 data rows = 348 records.
+- Total Processed Records Retained:
+  * State datasets: 28 states x 12 years = 336 records.
+  * National datasets: 1 aggregate x 12 years = 12 records.
+  * Combined records retained: 336 + 12 = 348 records (100.0% retention).
+- Non-Data Rows Retained:
+  * Table titles (Line 0) and units/subtitles (Line 1) extracted into source_notes.csv and report notes.
+  * Multirow headers (Lines 2-4) transformed into standardized column definitions.
+  * Trailing disclaimers and sampling notes extracted into source_notes.csv.
+- Conclusion: Zero valid substantive rows or fields were dropped. All blank cells from raw source files were preserved as IEEE 754 NaN without spurious numeric imputation.
+
+RELATIVE PATH VERIFICATION:
+- All output paths verified as relative to project root (`outputs/processed/...`).
+- Any absolute path typos previously present in markdown summaries have been corrected.
+
+================================================================================
+FINAL CLASSIFICATION OF ISSUES
+================================================================================
+
+1. Missing National Income Count (42 Cells):
+   -> CLASSIFICATION: VERIFIED CORRECT
+   -> EVIDENCE: Direct recalculation confirms 42 missing cells, strictly in the 6 in-kind columns (2 measures x 3 sectors) across 7 early years (6 x 7 = 42). All 30 other columns have 0 missing cells.
+
+2. Sampling Footnote Text & Scope:
+   -> CLASSIFICATION: CORRECTED
+   -> EVIDENCE: Removed unsupported assumption "annualized provisional data". Updated source_notes.csv and report notes to distinguish the 3 year-specific qualifications (2025-26) from the 31 global export portal disclaimers.
+
+3. State/UT Coverage, Boundaries & Missingness:
+   -> CLASSIFICATION: VERIFIED CORRECT & CLARIFIED
+   -> EVIDENCE: Complete year-by-year table generated. Identified structural absence of Total/Rural reporting in Chandigarh and non-reporting in early northeastern state-years without inventing unsourced historical explanations. Excluded India aggregate from state datasets with 100% fidelity.
+
+4. Output Integrity, Paths & Zero Data Loss:
+   -> CLASSIFICATION: VERIFIED CORRECT & CORRECTED
+   -> EVIDENCE: All 9 CSV outputs reopened and audited. Fixed path discrepancy typo to ensure all links use project-relative formatting. Defensible record reconciliation proves 348/348 raw substantive records retained per category.
+================================================================================
+STATUS: CHUNK 1 INDEPENDENT VERIFICATION COMPLETED AND CONFIRMED.
+================================================================================

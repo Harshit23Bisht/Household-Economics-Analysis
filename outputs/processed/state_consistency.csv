@@ -1,0 +1,4 @@
+Category,Total_Years,Total_Records,Unique_state_labels,Missing_vs_Income,Extra_vs_Income,Consistent_With_All
+Income,12,336,28,None,None,True
+Expenditure,12,336,28,None,None,True
+EMI,12,336,28,None,None,True
